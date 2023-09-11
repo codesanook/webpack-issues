@@ -7,5 +7,8 @@
   yarn 
   yarn workspaces run dev
   ```
-- Launch dist/index.html with a web server e.g. Live Server (Visual Studio Code extension)
+- Launch dist/index.html with a web server with:
+  ```sh
+  yarn workspace app run serve
+  ```
 - If everything is correct, there will an alert box in a browser.
