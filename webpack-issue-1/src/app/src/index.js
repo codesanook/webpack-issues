@@ -1,6 +1,8 @@
 import _ from 'lodash';
 
-export function init() {
+function init() {
   const max = _.max([4, 2, 8, 6]);
-  console.log(max);
+  alert(max);
 }
+
+export default { init };

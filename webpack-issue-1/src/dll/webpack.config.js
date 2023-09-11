@@ -1,4 +1,3 @@
-// This webpack is only for build Sass to CSS
 const webpack = require("webpack");
 const path = require("path");
 const resolve = path.resolve;

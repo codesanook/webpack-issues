@@ -1,4 +1,3 @@
-// This webpack is only for build Sass to CSS
 const webpack = require("webpack");
 const path = require("path");
 const resolve = path.resolve;
@@ -12,7 +11,11 @@ module.exports = {
   output: {
     path: outputPath,
     filename: '[name].js',
-    library: '[name]'
+    library: {
+      name: '[name]',
+      type: 'var',
+      export: 'default',
+    },
   },
   resolve: {
     extensions: ['.js']
@@ -29,8 +32,8 @@ module.exports = {
     ]
   },
   plugins: [
-    // new webpack.DllReferencePlugin({
-    //   manifest: path.join(outputPath, "./vendor-manifest.json"),
-    // }),
+    new webpack.DllReferencePlugin({
+      manifest: path.join(outputPath, "./vendor-manifest.json")
+    }),
   ],
 };

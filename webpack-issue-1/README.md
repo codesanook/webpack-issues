@@ -1,22 +1,11 @@
-```sh
-yarn workspace dll add -D \
-  webpack \
-  webpack-cli \
-  @babel/core \
-  @babel/preset-env \
-  babel-loader \
-  lodash
-```
 
 
+# How to run the project
 
-yarn workspace app add -D \
-  webpack \
-  webpack-cli \
-  @babel/core \
-  @babel/preset-env \
-  babel-loader \
-  lodash
-
-yarn workspace dll run dev
-yarn workspace app run dev
+- Install and build Node.js projects with Yarn Workspaces.
+  ```sh
+  yarn 
+  yarn workspaces run dev
+  ```
+- Launch dist/index.html with a web server e.g. Live Server (Visual Studio Code extension)
+- If everything is correct, there will an alert box in a browser.
