@@ -36,4 +36,15 @@ module.exports = {
       manifest: path.join(outputPath, "./vendor-manifest.json")
     }),
   ],
+  devServer: {
+    static: {
+      directory: outputPath,
+    },
+    compress: true,
+    port: 9000,
+    open: true,
+    client: {
+      overlay: false,
+    },
+  },
 };
